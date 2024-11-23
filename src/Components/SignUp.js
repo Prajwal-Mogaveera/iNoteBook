@@ -27,7 +27,7 @@ function SignUp(props) {
       body: JSON.stringify({ name: e1.value, email: e2.value, password: e3.value })
     })
     const json = await response.json()
-    console.log(json)
+    // console.log(json)
     if (json.success) {
       console.log("Signed up successfully")
       localStorage.setItem("token", json.authToken)

@@ -36,20 +36,9 @@ const NoteState = props => {
       body: JSON.stringify({ title, description, tag })
     })
     const json = await response.json()
-    console.log(json)
+    // console.log(json)
 
     fetchNote()
-
-    // const Note = {
-    //   _id: "63985d15d6f0a5bf932010c6",
-    //   user: "637cf041ef6c884dc3ce767b",
-    //   title: title,
-    //   description: description,
-    //   tag: tag,
-    //   date: "2022-12-13T11:07:37.726Z",
-    //   __v: 0
-    // }
-    // setNotes(notes.concat(Note))
   }
 
   //Delete note
@@ -63,15 +52,9 @@ const NoteState = props => {
       }
     })
     const json = await response.json()
-    console.log(json)
+    // console.log(json)
 
     fetchNote()
-
-    // console.log("Deleting note with id " + id)
-    // const newNote = notes.filter(note => {
-    //   return note._id !== id
-    // })
-    // setNotes(newNote)
   }
 
   //Update note
@@ -86,15 +69,9 @@ const NoteState = props => {
       body: JSON.stringify({ title, description, tag })
     })
     const json = await response.json()
-    console.log(json)
+    // console.log(json)
 
     fetchNote()
-
-    // console.log("Deleting note with id " + id)
-    // const newNote = notes.filter(note => {
-    //   return note._id !== id
-    // })
-    // setNotes(newNote)
   }
 
   //Fetch user details
@@ -108,14 +85,8 @@ const NoteState = props => {
       }
     })
     const json = await response.json()
-    console.log(json.user)
+    // console.log(json.user)
     setUser(json.user)
-    //setUser(json)
-    // console.log("Deleting note with id " + id)
-    // const newNote = notes.filter(note => {
-    //   return note._id !== id
-    // })
-    // setNotes(newNote)
   }
 
   return <noteContext.Provider value={{ notes, addNote, deleteNote, fetchNote, editNote, fetchUser, user }}>{props.children}</noteContext.Provider>
